@@ -3,7 +3,7 @@ import pandas as pd
 
 
 np.set_printoptions(suppress=True)
-csv_file_path = 'C:\\Users\\kerem\\Housing.csv'
+csv_file_path = 'Housing.csv' # FILE PATH OF DATASET
 df = pd.read_csv(csv_file_path)
 
 data_array = df.to_numpy()
@@ -54,4 +54,4 @@ loss_val = 0
 for e in range(epochs):
     gradient_descent(x_train,y_train,learning_rate)
     print(f"Epoch: {e}   , w_1: {w[0]} , w2: {w[1]} , w3: {w[2]} , w4: {w[3]}")
-print(f"2. House price predict: {(np.dot(x_train[4], w) + b) * 13300000.0} , real price {y_train[4] * 13300000.0}")
+print(f"2. House price predict: {(np.dot(x_train[4], w) + b) * 13300000.0} , real price {y_train[4] * 13300000.0}") # YOU HAVE TO CHANGE THE FIRST PARAMETER OF NP.DOT FUNCTION CALL FOR DETECTING PRICES OF DIFFERENT FEATURES
